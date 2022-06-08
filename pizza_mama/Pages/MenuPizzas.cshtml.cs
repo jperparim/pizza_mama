@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using pizza_mama.Models;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace pizza_mama.Pages
@@ -22,6 +23,7 @@ namespace pizza_mama.Pages
         public async Task OnGetAsync()
         {
             Pizza = await _context.Pizzas.ToListAsync();
+            Pizza = Pizza.OrderBy(p => p.prix).ToList();
         }
     }
 }
