@@ -38,6 +38,7 @@ namespace pizza_mama
             options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddRazorPages();
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -71,6 +72,7 @@ namespace pizza_mama
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }
