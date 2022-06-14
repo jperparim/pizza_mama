@@ -1,0 +1,10 @@
+
+
+
+nom de la base : pizzamamasql
+
+nom du serveur : pizzamamapjtestsql
+
+nom admin : jperparim
+
+mdp : +Perparim12

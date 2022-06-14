@@ -34,8 +34,14 @@ namespace pizza_mama
                     });
 
             // IOC --> Inversion Of Control --> Créer des instances ou conserver des instances uniques (singleton)
+
+
+            //services.AddDbContext<DataContext>(options =>
+            //options.UseSqlite(Configuration.GetConnectionString("DefaultConnectionSqLite")));
+
             services.AddDbContext<DataContext>(options =>
-            options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
 
             services.AddRazorPages();
             services.AddControllers();
@@ -50,6 +56,7 @@ namespace pizza_mama
             CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 
             if (env.IsDevelopment())
+            if(true)
             {
                 app.UseDeveloperExceptionPage();
             }
